@@ -65,6 +65,7 @@ export default {
         border-top: 3px solid #34a8f8;
         padding: 0 3px;
         margin-left: 5px;
+        font-size: 16px;
         &:hover {
           border-top: 3px solid #7dd600;
         }
@@ -75,7 +76,7 @@ export default {
           text-align: center;
           border-top: none;
           position: relative;
-          top: -3px;
+          top: -2.6px;
           &:hover {
             background-position: 0 -70px;
             border-top: none;
