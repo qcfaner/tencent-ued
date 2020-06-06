@@ -16,7 +16,6 @@ const routes = [
     { path: '/jobs', component: () => import('@/views/jobs/index.vue') },
     { path: '/about', component: () => import('@/views/about/index.vue') },
     { path: '/join', component: () => import('@/views/h5_join/index.vue') }
-
 ]
 
 // 3. 创建并导出 VueRouter 实例
