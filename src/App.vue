@@ -10,7 +10,7 @@
       </div>
 
       <!-- 侧边栏 -->
-      <div class="sidebar">
+      <div class="sidebar-warp">
         <sideBar></sideBar>
       </div>
     </div>

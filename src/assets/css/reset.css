@@ -46,3 +46,18 @@ table {
 	border-collapse: collapse;
 	border-spacing: 0;
 }
+
+/* 根据需求进行补充 */
+a {
+    color: #333;
+    text-decoration: none;
+}
+a:hover, a:active {
+    color: #BD0A01;
+}
+body {
+    font: 14px "微软雅黑","Arial Narrow",HELVETICA;
+    background: #fff;
+    line-height: 22px;
+    -webkit-text-size-adjust: 100%;
+}
