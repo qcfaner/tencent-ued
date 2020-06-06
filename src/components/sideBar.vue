@@ -9,7 +9,7 @@
 
     <!-- 侧边栏：广告位 -->
     <div class="ads">
-      
+      <img src="@/assets/image/common-ads-bg.jpg" alt="广告位">
     </div>
   </div>
 </template>
