@@ -5,12 +5,15 @@
 </template>
 
 <script>
-export default {};
+export default {
+  name: "topNav"
+};
 </script>
 
 <style lang='less' scoped>
 .header {
   height: 70px;
+  line-height: 70px;
   background: #34a8f8;
   .nav-content {
     width: 960px;

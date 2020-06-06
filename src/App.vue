@@ -1,6 +1,7 @@
 <template>
   <div class="app-container">
-    <top></top>
+    <!-- 顶部导航 -->
+    <topNav></topNav>
     <!-- 路由出口 -->
     <!-- 路由匹配到的组件将渲染在这里 -->
     <router-view></router-view>
@@ -8,11 +9,11 @@
 </template>
 
 <script>
-import top from "@/components/header.vue";
+import topNav from "@/components/topNav.vue";
 export default {
   name: "App",
   components: {
-    top
+    topNav
   }
 };
 </script>
