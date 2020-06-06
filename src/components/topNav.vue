@@ -2,9 +2,8 @@
   <div class="header">
     <div class="nav-content clearfix">
       <div class="fl">
-        <a href="javascript:;">
-          <img src="@/assets/image/top-nav/nav-logo.jpg" alt="官方链接" />
-        </a>
+        <img src="@/assets/image/top-nav/nav-logo.jpg" alt="官方链接" />
+        <!-- <a href="javascript:;"></a> -->
       </div>
       <ul class="clearfix fr nav-banner">
         <li>
