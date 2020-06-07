@@ -20,9 +20,7 @@
     </div>
     <div class="content-mian">
       <a href="javascript:;"></a>
-      <div class="content-info">
-        {{ article.describe }}
-      </div>
+      <div class="content-info">{{ article.describe }}</div>
     </div>
     <div class="content-read clearfix">
       <a class="fr icon" href="javascript:;">阅读全文</a>
@@ -35,8 +33,8 @@ export default {
   props: {
     article: {
       type: Object,
-      default(){
-        return {}
+      default() {
+        return {};
       }
     }
   }
@@ -47,6 +45,10 @@ export default {
 .content {
   padding: 25px 0;
   border-bottom: 1px dotted #ccc;
+  color: #666;
+  a {
+    color: #666;
+  }
   .content-top {
     height: 60px;
     .content-pic {
