@@ -35,12 +35,7 @@
      <!-- 侧边栏：近期文章-->
     <card title="近期文章">
       <ul>
-        <li><a href="javascript:;">2016冬季星空演讲设计总结</a></li>
-        <li><a href="javascript:;">设计让改变发生—2016腾讯网络媒</a></li>
-        <li><a href="javascript:;">关于VR，设计师要去做四件事</a></li>
-        <li><a href="javascript:;">关于VR，设计师要去做四件事</a></li>
-        <li><a href="javascript:;">关于VR，设计师要去做四件事</a></li>
-        <li><a href="javascript:;">关于VR，设计师要去做四件事</a></li>
+        <li v-for="article in articleList" :key="article.id"><a href="javascript:;">{{ article.title }}</a></li>
       </ul>
     </card>
   </div>
@@ -52,8 +47,19 @@ export default {
   components: { card },
   data(){
     return {
-      input: ""
+      input: "",
+      articleList: [] // 近期文章
     }
+  },
+  methods: {
+    getArticleList(){
+      this.$http.get('/service/article-list').then(res => {
+        this.articleList = res && res.data.data;
+      })
+    }
+  },
+  created(){
+    this.getArticleList();
   }
 }
 </script>

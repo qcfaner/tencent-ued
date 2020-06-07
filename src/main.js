@@ -9,10 +9,13 @@ Vue.use(ElementUI, {size: 'small'});
 import "@/assets/css/reset.css"
 import "@/assets/css/theme.less"
 import "@/assets/css/index.css"
-Vue.config.productionTip = false
 
 import App from './App.vue'
 
+import axios from "./utils/http.js"
+Vue.prototype.$axios = axios;
+
+Vue.config.productionTip = false
 new Vue({
   router,
   render: h => h(App),
