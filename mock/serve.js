@@ -17,15 +17,17 @@ app.use('/service/article-list',function(req, res){
     let articleList = [];
     for (let i = 0; i < 10; i++) {
         let tempDate = Mock.mock({
-            'author|1': ['sunny', 'qcfaner', 'jack']
+            'author|1': ['sunny', 'qcfaner', 'jack'],
+            'color': Random.color()
         });
         articleList.push(Mock.mock({
             'id': Random.id(),              // id
             'title': Random.ctitle(5, 15),  // 文章标题
             'describe': Random.csentence(60, 100),   // 文章概览
+            'previewImage': i%1==0? Random.image('690x180', tempDate.color):"",
             'meta': {
                 'author': tempDate.author,
-                'picture': Random.image('60x60', Random.color(), tempDate.author),
+                'picture': Random.image('60x60', tempDate.color, tempDate.author),
                 'createDate': Random.datetime(),
                 'tag|1': ['交互设计', '作品案例', '前端技术',  '杂七杂八',  '用户研究',  '视觉设计', '资源推荐'],
                 'comments|1-10': 10
