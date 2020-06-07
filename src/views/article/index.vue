@@ -1,12 +1,29 @@
 <template>
-  <card></card>
+  <div>
+    <articleCard v-for="article in articleList" :key="article.id" :article="article"></articleCard>
+  </div>
 </template>
 
 <script>
-import card from "@/components/articleCard.vue";
+import articleCard from "@/components/articleCard.vue";
 export default {
   components: {
-    card
+    articleCard
+  },
+  data(){
+    return {
+      articleList: []
+    }
+  },
+  methods: {
+    getArticleList(){
+      this.$axios.get('/service/article-list').then( res=> {
+        this.articleList  = res && res.data.data;
+      })
+    }
+  },
+  created(){
+    this.getArticleList();
   }
 };
 </script>

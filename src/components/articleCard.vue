@@ -2,28 +2,26 @@
   <div class="content">
     <div class="content-top">
       <a class="content-pic fl" href="javascript:;">
-        <img src="@/assets/image/article-img.jpg" alt="人员图像" />
+        <img :src="article.meta.picture" alt="人员图像" />
       </a>
       <div class="content-intro">
         <div class="title">
-          <a href="javascript:;">2016冬季星空演讲设计总结</a>
+          <a href="javascript:;">{{ article.title }}</a>
         </div>
         <div class="des">
-          <a href="javascript:;">moon</a>
+          <a href="javascript:;">{{ article.meta.author }}</a>
           <span class="line">|</span>
-          <span>2016.12.02</span>
+          <span>{{ article.meta.createDate }}</span>
           <span class="line">|</span>
-          <a href="javascript:;">作品案例</a>,
-          <a href="javascript:;">视觉设计</a>
-          <a class="mark" herf="javascript:;">0</a>
+          <a href="javascript:;">{{ article.meta.tag }}</a>
+          <a class="mark" herf="javascript:;">{{ article.meta.comments }}</a>
         </div>
       </div>
     </div>
     <div class="content-mian">
       <a href="javascript:;"></a>
       <div class="content-info">
-        2016冬季星空演讲，与上期相同都是由明星讲述人生历程之类的演讲为卖点，拉近明星与粉丝之间的关系。
-        不同的是，本期基调主打“有深度、有格调、有内涵”。 视觉与收获 1、各推广视觉保持统一的设计元素和基调，打造温暖有品质的视觉效果； 2、嘉宾形象+主要作品构成明星…
+        {{ article.describe }}
       </div>
     </div>
     <div class="content-read clearfix">
@@ -33,7 +31,16 @@
 </template>
 
 <script>
-export default {};
+export default {
+  props: {
+    article: {
+      type: Object,
+      default(){
+        return {}
+      }
+    }
+  }
+};
 </script>
 
 <style lang='less' scoped>
@@ -47,6 +54,9 @@ export default {};
       vertical-align: top;
       margin-left: 5px;
       margin-right: 15px;
+      img {
+        border-radius: 50%;
+      }
     }
     .content-intro {
       .title {
