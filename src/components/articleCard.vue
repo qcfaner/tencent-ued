@@ -5,9 +5,11 @@
         <img :src="article.meta.picture" alt="人员图像" />
       </a>
       <div class="content-intro">
+        <!-- 文章标题 -->
         <div class="title">
-          <a href="javascript:;">{{ article.title }}</a>
+          <a :href="'#/article/details/'+ article.id">{{ article.title }}</a>
         </div>
+        <!-- 文章元信息 -->
         <div class="des">
           <a href="javascript:;">{{ article.meta.author }}</a>
           <span class="line">|</span>
@@ -19,7 +21,7 @@
       </div>
     </div>
     <div class="content-mian">
-      <a href="javascript:;">
+      <a href="javascript:;" v-if="article.previewImage">
         <img :src="article.previewImage" />
       </a>
       <div class="content-info">{{ article.describe }}</div>
