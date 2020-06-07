@@ -1,13 +1,15 @@
 <template>
-  <p>文章模块</p>
+  <card></card>
 </template>
 
 <script>
+import card from "@/components/articleCard.vue";
 export default {
-
-}
+  components: {
+    card
+  }
+};
 </script>
 
 <style>
-
 </style>
