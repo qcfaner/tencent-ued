@@ -19,7 +19,9 @@
       </div>
     </div>
     <div class="content-mian">
-      <a href="javascript:;"></a>
+      <a href="javascript:;">
+        <img :src="article.previewImage" />
+      </a>
       <div class="content-info">{{ article.describe }}</div>
     </div>
     <div class="content-read clearfix">
