@@ -23,8 +23,8 @@ app.use('/service/article-list',function(req, res){
         articleList.push(Mock.mock({
             'id': Random.id(),              // id
             'title': Random.ctitle(5, 15),  // 文章标题
-            'describe': Random.csentence(60, 100),   // 文章概览
-            'previewImage': i%1==0? Random.image('690x180', tempDate.color):"",
+            'describe': Random.csentence(60, 100),   // 文章概览 Random.image('690x180', tempDate.color, '#FFF', 'QQ.COM UED')
+            'previewImage': (i>0 && i%2 == 0)? Random.image('690x180', tempDate.color, "#FFF", 'Tencent-UED'):"",
             'meta': {
                 'author': tempDate.author,
                 'picture': Random.image('60x60', tempDate.color, tempDate.author),
