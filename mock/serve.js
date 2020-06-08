@@ -13,6 +13,7 @@ app.use(function (req, res, next) {
     next();
 });
 
+// 文章列表接口
 app.use('/service/article-list', function (req, res) {
     let articleList = [];
     for (let i = 0; i < 10; i++) {
@@ -39,16 +40,15 @@ app.use('/service/article-list', function (req, res) {
         data: articleList
     });
 })
+
+// 文章详情接口
 app.use('/serve/articles-detail', function (req, res) {
-    let articleDetail = {};
-    Mock.mock({
-        "articleDetail": {
-            'title': Random.ctitle(5, 15),
-        }
-    })
+    let articleDetail = Mock.mock({
+        content: Random.csentence(600, 1000)
+    });
     res.json({
         status: 200,
-        data: articleList
+        data: articleDetail
     });
 })
 

@@ -1,12 +1,14 @@
 <template>
   <div>
     <h3>文章 id:{{ $route.params.id }}</h3>
-    <div>{{articleDetail.title}}</div>
+    <!-- <div>{{ article.title }}</div> -->
+    <div>{{articleDetail.content}}</div>
   </div>
 </template>
 
 <script>
 export default {
+  props: ["article"],
   data() {
     return {
       articleDetail: {}
@@ -21,6 +23,7 @@ export default {
   },
   created() {
     this.getArticleDetail();
+    console.log(this.article);
   }
 };
 </script>
