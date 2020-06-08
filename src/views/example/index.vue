@@ -30,14 +30,4 @@ export default {
 </script>
 
 <style lang='less' scoped>
-.preface {
-  padding-top: 25px;
-  padding-bottom: 10px;
-  border-bottom: 1px solid #e3e3e3;
-  margin-bottom: 20px;
-  line-height: 30px;
-  font-size: 22px;
-  color: #666;
-  font-family: "微软雅黑", "黑体";
-}
 </style>

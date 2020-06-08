@@ -14,7 +14,6 @@
         <sideBar></sideBar>
       </div>
     </div>
-    
   </div>
 </template>
 
@@ -30,5 +29,9 @@ export default {
 };
 </script>
 
-<style>
+<style lang='less' scoped>
+.main-wrap {
+  color: #333;
+  font-family: "微软雅黑", "黑体";
+}
 </style>

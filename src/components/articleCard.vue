@@ -47,10 +47,6 @@ export default {
 .content {
   padding: 25px 0;
   border-bottom: 1px dotted #ccc;
-  color: #666;
-  a {
-    color: #666;
-  }
   .content-top {
     height: 60px;
     .content-pic {
