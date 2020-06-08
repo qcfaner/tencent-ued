@@ -11,7 +11,8 @@ Vue.use(VueRouter);
 // 2. 定义路由
 const routes = [
     { path: '/', redirect: '/article' },    // 访问根目录重定向
-    { path: '/article', component: () => import('@/views/article/index.vue') },
+    { path: '/article', component: () => import('@/views/article/index.vue'), meta: {name: 'zhanglei'} },
+    { path: '/article/details/:id', component: () => import('@/views/article/details.vue') },
     { path: '/example', component: () => import('@/views/example/index.vue') },
     { path: '/jobs', component: () => import('@/views/jobs/index.vue') },
     { path: '/about', component: () => import('@/views/about/index.vue') },

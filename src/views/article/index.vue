@@ -10,19 +10,19 @@ export default {
   components: {
     articleCard
   },
-  data(){
+  data() {
     return {
       articleList: []
-    }
+    };
   },
   methods: {
-    getArticleList(){
-      this.$axios.get('/service/article-list').then( res=> {
-        this.articleList  = res && res.data.data;
-      })
+    getArticleList() {
+      this.$axios.get("/service/article-list").then(res => {
+        this.articleList = res && res.data.data;
+      });
     }
   },
-  created(){
+  created() {
     this.getArticleList();
   }
 };
