@@ -4,10 +4,10 @@
     <topNav></topNav>
     <div class="nav-bar" v-if="showBanner">
       <ul class="showBanner clearfix">
-        <li v-show="this.currentIndex==0">
+        <li v-show="this.currentIndex===0">
           <a href="javascript:;"></a>
         </li>
-        <li v-show="this.currentIndex==1">
+        <li v-show="this.currentIndex===1">
           <a href="javascript:;"></a>
         </li>
       </ul>
