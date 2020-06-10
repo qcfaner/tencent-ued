@@ -22,6 +22,10 @@ const routes = [
 
 // 3. 创建并导出 VueRouter 实例
 export default new VueRouter({
-    routes
+    routes,
+    scrollBehavior (to, from, savedPosition) {
+        // return 期望滚动到哪个的位置
+        return { x: 0, y: 0 };  // 滚动到顶部
+    }
 });
 
