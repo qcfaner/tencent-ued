@@ -3,11 +3,11 @@
     <!-- 顶部导航 -->
     <topNav></topNav>
     <div class="nav-bar" v-if="showBanner">
-      <ul class="showBanner clearfix" :style="{left:changeSeat}">
-        <li>
+      <ul class="showBanner clearfix">
+        <li v-show="this.currentIndex==0">
           <a href="javascript:;"></a>
         </li>
-        <li>
+        <li v-show="this.currentIndex==1">
           <a href="javascript:;"></a>
         </li>
       </ul>
@@ -55,11 +55,6 @@ export default {
       this.currentIndex = index;
     }
   },
-  computed: {
-    changeSeat() {
-      return `-${this.currentIndex * 1280}px`;
-    }
-  },
   watch: {
     $route: function(n, o) {
       console.log(this.$route); // 从 $route 里面可以获取当前的路由配置信息
@@ -80,11 +75,9 @@ export default {
   .showBanner {
     position: relative;
     height: 300px;
-    width: 2560px;
-    overflow: hidden;
     li {
       float: left;
-      width: 1280px;
+      width: 100%;
       a {
         display: block;
         height: 300px;
