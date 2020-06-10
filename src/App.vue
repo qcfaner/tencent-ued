@@ -1,6 +1,6 @@
 <template>
   <div class="app-container">
-    <!-- 顶部导航 -->
+    <!-- 顶部导航11 -->
     <topNav></topNav>
     <div class="nav-bar" v-if="showBanner">
       <ul class="showBanner clearfix">
