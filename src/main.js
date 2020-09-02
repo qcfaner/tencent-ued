@@ -4,11 +4,16 @@ import router from "./router.js";
 // 引入 elementui 库
 import ElementUI from 'element-ui';
 import 'element-ui/lib/theme-chalk/index.css';
-Vue.use(ElementUI, {size: 'small'});
+Vue.use(ElementUI, { size: 'small' });
+
+import 'animate.css'
+// Vue.use(animate)
 
 import "@/assets/css/reset.css"
 import "@/assets/css/theme.less"
 import "@/assets/css/index.css"
+
+
 
 import App from './App.vue'
 
